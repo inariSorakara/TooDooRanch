@@ -1,0 +1,18 @@
+class TOODOO:
+    TOODOOs_list = []
+    def __init__(self, name="new_TOODOO"):
+        self.name = name
+        self.tasks = []
+
+    @classmethod
+    def create_new_TOODOO(cls):
+        while True:
+            name = input("name your new TOODOO")
+            if not name:
+                print("The TOODOO needs a name!")
+            else:
+                print("New TOODOO is born! Name: ", name)
+                new_TOODOO = cls(name)
+                cls.TOODOOs_list.append(new_TOODOO) #Store in the class attribute
+                print(f"New TOODOO is born: {name}")
+                return new_TOODOO
