@@ -1,0 +1,42 @@
+###
+#IMPORTS
+###
+from TODO import TODO
+from Task import Task
+
+###
+#MAIN
+###
+
+
+def main():
+  while True:
+    print("\n Welcome to TODO.py")
+    print("What do you want to do?")
+    print("1. Create a new list")
+    print("2. Look at a list")
+    print("3. Edit a list")
+    print("4. Delete a list")
+    print("0. Quit")
+    try:
+      answer = int(input("Choose an option:"))
+      if answer == 1:
+        #Creates a new TODO object
+        new_TODO = TODO.create_new_TODO()
+      elif answer == 2:
+        print("Looking at list!")
+      elif answer == 3:
+        print("Editing a list!")
+      elif answer == 4:
+        print("Deleting a list!")
+      elif answer == 0:
+        print("Exiting TODO.py now! Bye!")
+        break  #Exits the program
+      else:
+        print("Invalid option. Please choose a number from the menu.")
+    except ValueError:
+      print("Invalid option. Please choose a number from the menu.")
+
+
+if __name__ == "__main__":
+  main()
